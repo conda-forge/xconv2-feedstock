@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: xconv2
-  version: "0.3.1"
+  version: "0.3.2"
   python_min: "3.12"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/x/xconv2/xconv2-${{ version }}.tar.gz
-  sha256: 9cd7b1dbf9eae2f954c100e9495897b13de4b1b95af69d7683b213e62892d958
+  sha256: 7156e9eb8dcccfba74ed92dfbb0768b8769a3a1dd57569f1d877e498928a17d6
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - cartopy
-    - cf-plot >=3.5.0
+    - cf-plot >=3.6.0
     - cf-python >=3.21.0
     - cryptography
     - esmpy
@@ -63,7 +63,7 @@ tests:
         - data
     requirements:
       run:
-        - pytest >6.0.0
+        - pytest
         - pytest-cov
         - pytest-html
         - pytest-xdist
