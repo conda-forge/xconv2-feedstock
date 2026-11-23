@@ -14,7 +14,7 @@ source:
   sha256: 7156e9eb8dcccfba74ed92dfbb0768b8769a3a1dd57569f1d877e498928a17d6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install .
 
@@ -39,7 +39,7 @@ requirements:
     - pillow
     - prov
     - pyfive >=1.2.0
-    - pyside6
+    - pyside6 >=6.11,<6.12  # https://github.com/NCAS-CMS/xconv2/pull/116
     - pystac-client
     - rdflib
     - s3fs
